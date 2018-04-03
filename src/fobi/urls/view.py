@@ -19,7 +19,7 @@ urlpatterns = [
     # ***********************************************************************
     # Form submitted success page
     url(_(r'^view/submitted/$'),
-        view=form_entry_submitted,
+        form_entry_submitted,
         name='fobi.form_entry_submitted'),
 
     # View form entry
@@ -29,7 +29,7 @@ urlpatterns = [
 
     # Form submitted success page
     url(_(r'^view/(?P<form_entry_slug>[\w_\-]+)/submitted/$'),
-        view=form_entry_submitted,
+        form_entry_submitted,
         name='fobi.form_entry_submitted'),
 
     # ***********************************************************************
@@ -37,7 +37,7 @@ urlpatterns = [
     # ***********************************************************************
     # Form wizard submitted success page
     url(_(r'^wizard-view/submitted/$'),
-        view=form_wizard_entry_submitted,
+        form_wizard_entry_submitted,
         name='fobi.form_wizard_entry_submitted'),
 
     # View form wizard entry
@@ -47,6 +47,6 @@ urlpatterns = [
 
     # Form wizard submitted success page
     url(_(r'^wizard-view/(?P<form_wizard_entry_slug>[\w_\-]+)/submitted/$'),
-        view=form_wizard_entry_submitted,
+        form_wizard_entry_submitted,
         name='fobi.form_wizard_entry_submitted'),
 ]

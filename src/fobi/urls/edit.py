@@ -42,7 +42,7 @@ urlpatterns = [
 
     # Create form entry
     url(_(r'^forms/create/$'),
-        view=create_form_entry,
+        create_form_entry,
         name='fobi.create_form_entry'),
 
     # Edit form entry
@@ -120,7 +120,7 @@ urlpatterns = [
 
     # Create form wizard entry
     url(_(r'^wizard/create/$'),
-        view=create_form_wizard_entry,
+        create_form_wizard_entry,
         name='fobi.create_form_wizard_entry'),
 
     # Edit form wizard entry
@@ -192,10 +192,10 @@ urlpatterns = [
     # ***********************************************************************
 
     # Forms dashboard
-    url(_(r'^$'), view=dashboard, name='fobi.dashboard'),
+    url(_(r'^$'), dashboard, name='fobi.dashboard'),
 
     # Form wizards dashboard
     url(_(r'^wizards/$'),
-        view=form_wizards_dashboard,
+        form_wizards_dashboard,
         name='fobi.form_wizards_dashboard'),
 ]
